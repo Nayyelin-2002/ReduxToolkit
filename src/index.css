@@ -121,3 +121,9 @@ ul li {
 .wel {
   text-align: center;
 }
+section {
+  width: 60%;
+  margin: 0 auto;
+  background-color: aqua;
+  text-align: center;
+}

@@ -27,7 +27,7 @@
 // export default store;
 
 import { configureStore, createSlice } from "@reduxjs/toolkit";
-
+import todoSlice from "../Store/reducer/todo";
 const initialCounterState = {
   counter: 0,
   isshow: true,
@@ -68,8 +68,13 @@ const authslice = createSlice({
 });
 
 const store = configureStore({
-  reducer: { counter: counterslice.reducer, auth: authslice.reducer },
+  reducer: {
+    counter: counterslice.reducer,
+    auth: authslice.reducer,
+    todo: todoSlice.reducer,
+  },
 });
+
 export const countersliceActions = counterslice.actions;
 export const counterAuthActions = authslice.actions;
 export default store;
